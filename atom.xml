@@ -6,20 +6,51 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://share.ycute.xyz/"/>
-  <updated>2020-01-23T03:54:47.894Z</updated>
+  <updated>2020-02-10T14:04:08.000Z</updated>
   <id>https://share.ycute.xyz/</id>
   
   <author>
-    <name>YCute</name>
+    <name>JAVA一家亲</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Springboot-redis实现数据库缓存-真香</title>
+    <link href="https://share.ycute.xyz/posts/db364b6c.html"/>
+    <id>https://share.ycute.xyz/posts/db364b6c.html</id>
+    <published>2020-02-10T14:04:08.000Z</published>
+    <updated>2020-02-10T14:04:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="../images/springcloud.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;../images/springcloud.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="Springboot" scheme="https://share.ycute.xyz/categories/Springboot/"/>
+    
+      <category term="Redis" scheme="https://share.ycute.xyz/categories/Redis/"/>
+    
+    
+      <category term="Springboot" scheme="https://share.ycute.xyz/tags/Springboot/"/>
+    
+      <category term="Redis" scheme="https://share.ycute.xyz/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
-    <link href="https://share.ycute.xyz/2020-01-23-hello-world.html"/>
-    <id>https://share.ycute.xyz/2020-01-23-hello-world.html</id>
+    <link href="https://share.ycute.xyz/posts/4a17b156.html"/>
+    <id>https://share.ycute.xyz/posts/4a17b156.html</id>
     <published>2020-01-23T03:54:47.894Z</published>
     <updated>2020-01-23T03:54:47.894Z</updated>
     
