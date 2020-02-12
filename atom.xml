@@ -36,14 +36,14 @@
     </summary>
     
     
-      <category term="Redis" scheme="https://share.ycute.xyz/categories/Redis/"/>
-    
       <category term="SpringBoot" scheme="https://share.ycute.xyz/categories/SpringBoot/"/>
     
+      <category term="Redis" scheme="https://share.ycute.xyz/categories/Redis/"/>
     
-      <category term="Redis" scheme="https://share.ycute.xyz/tags/Redis/"/>
     
       <category term="SpringBoot" scheme="https://share.ycute.xyz/tags/SpringBoot/"/>
+    
+      <category term="Redis" scheme="https://share.ycute.xyz/tags/Redis/"/>
     
   </entry>
   
