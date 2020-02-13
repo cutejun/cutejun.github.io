@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://java.ycute.xyz/"/>
-  <updated>2020-02-13T01:58:39.773Z</updated>
+  <updated>2020-02-13T02:02:39.377Z</updated>
   <id>https://java.ycute.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://java.ycute.xyz/posts/db364b6c.html"/>
     <id>https://java.ycute.xyz/posts/db364b6c.html</id>
     <published>2020-02-10T14:04:08.000Z</published>
-    <updated>2020-02-13T01:58:39.773Z</updated>
+    <updated>2020-02-13T02:02:39.377Z</updated>
     
     <content type="html"><![CDATA[<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>​    SpringBoot整合Redis做缓存，首先，得安装Redis，安装</p><p><img src="../images/springcloud.png" alt=""></p>]]></content>
     
@@ -36,14 +36,14 @@
     </summary>
     
     
-      <category term="SpringBoot" scheme="https://java.ycute.xyz/categories/SpringBoot/"/>
-    
       <category term="Redis" scheme="https://java.ycute.xyz/categories/Redis/"/>
     
+      <category term="SpringBoot" scheme="https://java.ycute.xyz/categories/SpringBoot/"/>
     
-      <category term="SpringBoot" scheme="https://java.ycute.xyz/tags/SpringBoot/"/>
     
       <category term="Redis" scheme="https://java.ycute.xyz/tags/Redis/"/>
+    
+      <category term="SpringBoot" scheme="https://java.ycute.xyz/tags/SpringBoot/"/>
     
   </entry>
   
