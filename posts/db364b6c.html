@@ -250,20 +250,20 @@ var _hmt = _hmt || [];
 <h4 id="6-Mapper-xml"><a href="#6-Mapper-xml" class="headerlink" title="6:Mapper.xml"></a>6:Mapper.xml</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span>?&gt;</span><br><span class="line">&lt;!DOCTYPE mapper PUBLIC <span class="string">"-//mybatis.org//DTD Mapper 3.0//EN"</span> <span class="string">"http://mybatis.org/dtd/mybatis-3-mapper.dtd"</span>&gt;</span><br><span class="line">&lt;mapper namespace=<span class="string">"com.ycute.rediscache.dao.UserMapper"</span>&gt;</span><br><span class="line">    &lt;!-- 映射表字段与实体类属性 --&gt;</span><br><span class="line">        &lt;resultMap id=<span class="string">"BaseResultMap"</span> type=<span class="string">"com.ycute.rediscache.model.Users"</span>&gt;</span><br><span class="line">            &lt;id column=<span class="string">"id"</span> property=<span class="string">"id"</span> jdbcType=<span class="string">"BIGINT"</span>/&gt;</span><br><span class="line">            &lt;result column=<span class="string">"user_name"</span> property=<span class="string">"userName"</span> jdbcType=<span class="string">"VARCHAR"</span>/&gt;</span><br><span class="line">            &lt;result column=<span class="string">"create_time"</span> property=<span class="string">"createTime"</span> jdbcType=<span class="string">"VARCHAR"</span>/&gt;</span><br><span class="line">        &lt;/resultMap&gt;</span><br><span class="line">        &lt;sql id=<span class="string">"Base_Col_List"</span>&gt;</span><br><span class="line">           id, user_name, create_time</span><br><span class="line">        &lt;/sql&gt;</span><br><span class="line">        &lt;select id=<span class="string">"mselectById"</span> resultMap=<span class="string">"BaseResultMap"</span>&gt;</span><br><span class="line">            select &lt;include refid="Base_Col_List"/&gt; from users where id=#&#123;id&#125;</span><br><span class="line">        &lt;/select&gt;</span><br><span class="line">&lt;/mapper&gt;</span><br></pre></td></tr></table></figure>
 
 <p>至此，代码贴完，最终，最重要的一步：</p>
-<p><img src="..%5Cimages%5CSpringboot+redis%5CApplocation.png" alt=""></p>
-<h4 id="7-开启缓存注解-看效果"><a href="#7-开启缓存注解-看效果" class="headerlink" title="7:开启缓存注解,看效果"></a>7:开启缓存注解,看效果</h4><p><img src="..%5Cimages%5CSpringboot+redis%5Cstart.png" alt=""></p>
+<p><img src="..%5Cimages%5CApplocation.png" alt=""></p>
+<h4 id="7-开启缓存注解-看效果"><a href="#7-开启缓存注解-看效果" class="headerlink" title="7:开启缓存注解,看效果"></a>7:开启缓存注解,看效果</h4><p><img src="..%5Cimages%5Cstart.png" alt=""></p>
 <p>此时，数据库以及缓存里面没有数据</p>
 <p>接着用接口测试神器 <a href=""><strong>Postman</strong></a> 执行三次</p>
 <figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">http://localhost:8888/add</span></span><br></pre></td></tr></table></figure>
 
 <p>控制台输出在接口实现类里面留下的方法执行输出</p>
-<p><img src="..%5Cimages%5CSpringboot+redis%5Cadd.png" alt=""></p>
+<p><img src="..%5Cimages%5Cadd.png" alt=""></p>
 <p>并且数据库和缓存里出现了刚刚添加的数据</p>
-<p><img src="..%5Cimages%5CSpringboot+redis%5Cadddate.png" alt=""></p>
+<p><img src="..%5Cimages%5Cadddate.png" alt=""></p>
 <p>此时测试</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:8888/get?id=3</span><br></pre></td></tr></table></figure>
 
-<p><img src="..%5Cimages%5CSpringboot+redis%5Cget.png" alt=""></p>
+<p><img src="..%5Cimages%5Cget.png" alt=""></p>
 <p>至此，Springboot使用redis做缓存测试完成！</p>
 <p>认真理解这几个注解！</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@CachePut</span>(key=<span class="string">"#user.getId()"</span>,value = <span class="string">"user"</span>)</span><br><span class="line"><span class="meta">@CacheEvict</span>(key=<span class="string">"#id"</span>,value = <span class="string">"user"</span>)</span><br><span class="line"><span class="meta">@Cacheable</span>(value = <span class="string">"user"</span>,key=<span class="string">"#id"</span>)</span><br></pre></td></tr></table></figure>
